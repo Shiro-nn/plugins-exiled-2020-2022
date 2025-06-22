@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67EBDF39-266F-49E1-A20F-46DC71A04BB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MongoDB</RootNamespace>
+    <AssemblyName>MongoDB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp_publicized">
+      <HintPath>..\..\lib\Assembly-CSharp_publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CommsHack">
+      <HintPath>..\..\lib\CommsHack.dll</HintPath>
+    </Reference>
+    <Reference Include="Images">
+      <HintPath>..\..\lib\Images.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Bson\bin\Debug\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Driver\bin\Debug\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Driver\bin\Debug\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyBloom">
+      <HintPath>..\..\lib\AmplifyBloom.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\lib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\lib\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\lib\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Loader, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\lib\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\lib\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\lib\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema">
+      <HintPath>..\..\lib\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\lib\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security.Cryptography.Algorithms" />
+    <Reference Include="System.Security.Cryptography.Encoding" />
+    <Reference Include="System.Security.Cryptography.Primitives" />
+    <Reference Include="System.Security.Cryptography.X509Certificates" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\lib\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\lib\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>..\..\lib\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\lib\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\..\Qurre\Qurre\lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\lib\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="auto_events\Main.cs" />
+    <Compile Include="auto_events\storm_base.cs" />
+    <Compile Include="jc3\cat_hook.cs" />
+    <Compile Include="Juggernaut\armor.cs" />
+    <Compile Include="logs\Plugin.cs" />
+    <Compile Include="logs\EventHandlers.cs" />
+    <Compile Include="logs\send.cs" />
+    <Compile Include="bc\mec.cs" />
+    <Compile Include="console\cmsg.cs" />
+    <Compile Include="discord\hook.cs" />
+    <Compile Include="discord\embed.cs" />
+    <Compile Include="events\Poltergeist\EventHandlers.cs" />
+    <Compile Include="events\Poltergeist\Extensions.cs" />
+    <Compile Include="force\forceclass.cs" />
+    <Compile Include="heal\heal.cs" />
+    <Compile Include="icom\text.cs" />
+    <Compile Include="items\spawns.cs" />
+    <Compile Include="items\physic.cs" />
+    <Compile Include="mongodb\shop.cs" />
+    <Compile Include="mongodb\donate.cs" />
+    <Compile Include="Configs.cs" />
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="oban\ban.cs" />
+    <Compile Include="Patches\Scp035.cs" />
+    <Compile Include="Patches\FootstepSyncPatch.cs" />
+    <Compile Include="Patches\HideTagPatch.cs" />
+    <Compile Include="Patches\puddlescp106ye.cs" />
+    <Compile Include="Patches\Scp049Speak.cs" />
+    <Compile Include="Patches\Scp939Attack.cs" />
+    <Compile Include="player\med.cs" />
+    <Compile Include="player\died.cs" />
+    <Compile Include="player\hurt.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="cspawn\spawn.cs" />
+    <Compile Include="remote\keycard.cs" />
+    <Compile Include="scp035\API\Scp035Data.cs" />
+    <Compile Include="scp035\Plugin.cs" />
+    <Compile Include="scp035\Logic.cs" />
+    <Compile Include="scp035\EventHandlers.cs" />
+    <Compile Include="scp228\API\data.cs" />
+    <Compile Include="scp228\EventHandlers.cs" />
+    <Compile Include="scp228\Configs.cs" />
+    <Compile Include="scp228\Logic.cs" />
+    <Compile Include="scp343\API\Data.cs" />
+    <Compile Include="scp343\Configs.cs" />
+    <Compile Include="scp343\EventHandlers.cs" />
+    <Compile Include="scp343\Logic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sh\shEventHandlers.cs" />
+    <Compile Include="stalky\stalky.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

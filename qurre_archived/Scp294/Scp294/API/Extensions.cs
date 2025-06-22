@@ -1,0 +1,45 @@
+using InventorySystem.Items;
+using InventorySystem.Items.Usables;
+using Qurre.API.Controllers;
+using Qurre.API.Controllers.Items;
+using Scp294.API;
+using Scp294.API.Features;
+using Scp294.API.Interfaces;
+
+namespace Scp294
+{
+    internal static class Extensions
+    {
+        internal static bool IsScp294(this Pickup pickup)
+        {
+            return pickup.Base.GetComponent<Scp294Component>() != null;
+        }
+
+        internal static bool TryGetDrink(this ItemIdentifier itemIdentifier, out IDrink drink)
+        {
+            return DrinksManager.Drinks.TryGetValue(itemIdentifier.SerialNumber, out drink);
+        }
+
+        internal static bool TryGetDrink(this Item item, out IDrink drink)
+        {
+            if (item != null)
+            {
+                return DrinksManager.Drinks.TryGetValue(item.Serial, out drink);
+            }
+
+            drink = null;
+            return false;
+        }
+
+        internal static bool TryGetDrink(this Scp207 scp207, out IDrink drink)
+        {
+            if (scp207 != null)
+            {
+                return DrinksManager.Drinks.TryGetValue(scp207.ItemSerial, out drink);
+            }
+
+            drink = null;
+            return false;
+        }
+    }
+}

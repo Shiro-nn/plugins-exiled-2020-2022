@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD567E37-AC55-42E5-9A8F-9D85566967D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loli</RootNamespace>
+    <AssemblyName>Loli</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp_public">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\Assembly-CSharp_public.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror_public">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\Mirror_public.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Qurre">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\.bin\Debug\Qurre.dll</HintPath>
+    </Reference>
+    <Reference Include="QurreSocket, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Qurre-Socket.1.1.2.1\lib\net48\QurreSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="SchematicUnity">
+      <HintPath>..\packages\SchematicUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="SCPDiscordLogs">
+      <HintPath>..\packages\SCPDiscordLogs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\Qurre-sl\Qurre-Source\depedencies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addons\AirDrop.cs" />
+    <Compile Include="Addons\BackupPower.cs" />
+    <Compile Include="Addons\BetterAirLocks.cs" />
+    <Compile Include="Addons\BroadCasts.cs" />
+    <Compile Include="Addons\Chat.cs" />
+    <Compile Include="Addons\ClansRecommendation.cs" />
+    <Compile Include="Addons\Caches.cs" />
+    <Compile Include="Addons\AdrenalineInsult.cs" />
+    <Compile Include="Addons\AutoAlpha.cs" />
+    <Compile Include="Addons\Pocket.cs" />
+    <Compile Include="Addons\NewItems.cs" />
+    <Compile Include="Addons\Spawn.cs" />
+    <Compile Include="Addons\ScpHeal.cs" />
+    <Compile Include="Addons\RemoteKeycard.cs" />
+    <Compile Include="Addons\OmegaWarhead.cs" />
+    <Compile Include="Addons\OfflineBan.cs" />
+    <Compile Include="Addons\Icom.cs" />
+    <Compile Include="Addons\Gate3.cs" />
+    <Compile Include="Addons\Force.cs" />
+    <Compile Include="Addons\EndStats.cs" />
+    <Compile Include="Addons\CrashProtect.cs" />
+    <Compile Include="Addons\Commands.cs" />
+    <Compile Include="Addons\CommandsSystem.cs" />
+    <Compile Include="Addons\RealSpawn\Chaos.cs" />
+    <Compile Include="BetterHints\Sender.cs" />
+    <Compile Include="BetterHints\Patches.cs" />
+    <Compile Include="BetterHints\Manager.cs" />
+    <Compile Include="BetterHints\HintStruct.cs" />
+    <Compile Include="DataBase\Customize.cs" />
+    <Compile Include="DataBase\Levels.cs" />
+    <Compile Include="DataBase\Module.cs" />
+    <Compile Include="DataBase\Modules\Admins.cs" />
+    <Compile Include="DataBase\Modules\Controllers\Beginner.cs" />
+    <Compile Include="DataBase\Modules\Controllers\Star.cs" />
+    <Compile Include="DataBase\Modules\Controllers\Priest.cs" />
+    <Compile Include="DataBase\Modules\Controllers\Nimb.cs" />
+    <Compile Include="DataBase\Modules\Controllers\Glow.cs" />
+    <Compile Include="DataBase\Modules\CustomDonates.cs" />
+    <Compile Include="DataBase\Modules\Donate.cs" />
+    <Compile Include="DataBase\Modules\Loader.cs" />
+    <Compile Include="DataBase\Modules\Patrol.cs" />
+    <Compile Include="DataBase\Modules\Data.cs" />
+    <Compile Include="DataBase\Modules\Stats.cs" />
+    <Compile Include="DataBase\Modules\Updater.cs" />
+    <Compile Include="DataBase\Prime.cs" />
+    <Compile Include="DataBase\Shop.cs" />
+    <Compile Include="Discord\Webhook.cs" />
+    <Compile Include="Discord\Embed.cs" />
+    <Compile Include="Logs\Api.cs" />
+    <Compile Include="Logs\Events.cs" />
+    <Compile Include="Logs\Fixes.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Modules\Another.cs" />
+    <Compile Include="Modules\AntiCrash.cs" />
+    <Compile Include="Modules\RoundCheck.cs" />
+    <Compile Include="Modules\Waiting.cs" />
+    <Compile Include="Modules\SurfaceObjects.cs" />
+    <Compile Include="Modules\Reports.cs" />
+    <Compile Include="Modules\Clear.cs" />
+    <Compile Include="Modules\Fixes.cs" />
+    <Compile Include="Modules\ClearRam.cs" />
+    <Compile Include="Modules\Cycle.cs" />
+    <Compile Include="Patches\AntiSpyGroups.cs" />
+    <Compile Include="Patches\OpenCustomDoor.cs" />
+    <Compile Include="Patches\NotFileLogs.cs" />
+    <Compile Include="Patches\HideTagPatch.cs" />
+    <Compile Include="Patches\FixGetIp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scps\God.cs" />
+    <Compile Include="Scps\Scp035.cs" />
+    <Compile Include="Scps\Scp008.cs" />
+    <Compile Include="Scps\Scp0492Better.cs" />
+    <Compile Include="Scps\Scp079Better.cs" />
+    <Compile Include="Scps\Scp294\API\DrinksManager.cs" />
+    <Compile Include="Scps\Scp294\API\Interfaces\IDrink.cs" />
+    <Compile Include="Scps\Scp294\API\Scp294.cs" />
+    <Compile Include="Scps\Scp294\Drinks\AloeVera.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Amnesia.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Beer.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Blood.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Cacao.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Carbon.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Chocolate.cs" />
+    <Compile Include="Scps\Scp294\Drinks\CocaCola.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Death.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Gold.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Hot.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Iron.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Juice.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Life.cs" />
+    <Compile Include="Scps\Scp294\Drinks\LiquidHidrogen.cs" />
+    <Compile Include="Scps\Scp294\Drinks\LiquidNitrogen.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Milk.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Pepsi.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Perfume.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Rage.cs" />
+    <Compile Include="Scps\Scp294\Drinks\SeaWater.cs" />
+    <Compile Include="Scps\Scp294\Drinks\SulfuricAcid.cs" />
+    <Compile Include="Scps\Scp294\Drinks\Vodka.cs" />
+    <Compile Include="Scps\Scp294\Events.cs" />
+    <Compile Include="Scps\Scp294\Extensions.cs" />
+    <Compile Include="Scps\Scp294\Patch.cs" />
+    <Compile Include="Spawns\ChaosInsurgency.cs" />
+    <Compile Include="Spawns\MobileTaskForces.cs" />
+    <Compile Include="Spawns\Roles\Hacker.cs" />
+    <Compile Include="Spawns\SerpentsHand.cs" />
+    <Compile Include="Spawns\SpawnManager.cs" />
+    <Compile Include="Textures\Load.cs" />
+    <Compile Include="Textures\Models\Lamp.cs" />
+    <Compile Include="Textures\Models\Lift.cs" />
+    <Compile Include="Textures\Models\Panel.cs" />
+    <Compile Include="Textures\Models\Pizza.cs" />
+    <Compile Include="Textures\Models\Radar.cs" />
+    <Compile Include="Textures\Models\Rooms\Bashni.cs" />
+    <Compile Include="Textures\Models\Rooms\Control.cs" />
+    <Compile Include="Textures\Models\Rooms\Podval.cs" />
+    <Compile Include="Textures\Models\Rooms\Range.cs" />
+    <Compile Include="Textures\Models\Rooms\Servers.cs" />
+    <Compile Include="Textures\Models\Rooms\ServersManager.cs" />
+    <Compile Include="Textures\Models\Server.cs" />
+    <Compile Include="Textures\Models\Turret.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5B76EDC-90B0-4C2F-80AD-EEEDB8D67065}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlayerXP</RootNamespace>
+    <AssemblyName>PlayerXP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\lib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="discord">
+      <HintPath>..\..\discord\discord\bin\Debug\discord.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API">
+      <HintPath>..\..\lib\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events">
+      <HintPath>..\..\lib\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Loader">
+      <HintPath>..\..\lib\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions">
+      <HintPath>..\..\lib\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\lib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Bson\bin\Debug\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Driver\bin\Debug\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\..\..\mongo-csharp-driver\src\MongoDB.Driver\bin\Debug\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\lib\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\lib\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security.Cryptography.Algorithms" />
+    <Reference Include="System.Security.Cryptography.Encoding" />
+    <Reference Include="System.Security.Cryptography.Primitives" />
+    <Reference Include="System.Security.Cryptography.X509Certificates" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\lib\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet, Version=8.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bc\mec.cs" />
+    <Compile Include="console\cmsg.cs" />
+    <Compile Include="discord\hook.cs" />
+    <Compile Include="discord\embed.cs" />
+    <Compile Include="events\hideandseek\API\Data.cs" />
+    <Compile Include="events\hideandseek\Commands.cs" />
+    <Compile Include="events\hideandseek\EventHandlers.cs" />
+    <Compile Include="events\hideandseek\Extensions.cs" />
+    <Compile Include="events\hideandseek\Methods.cs" />
+    <Compile Include="events\hideandseek\Plugin.cs" />
+    <Compile Include="events\mtfvsci.cs" />
+    <Compile Include="events\Poltergeist\EventHandlers.cs" />
+    <Compile Include="events\Poltergeist\Extensions.cs" />
+    <Compile Include="force\forceclass.cs" />
+    <Compile Include="gate3\Editor\commands.cs" />
+    <Compile Include="gate3\Editor\Editor.cs" />
+    <Compile Include="gate3\Editor\EventHandlers.cs" />
+    <Compile Include="gate3\Editor\Plugin.cs" />
+    <Compile Include="gate3\EventHandlers.cs" />
+    <Compile Include="gate3\Extensions.cs" />
+    <Compile Include="gate3\Plugin.cs" />
+    <Compile Include="heal\heal.cs" />
+    <Compile Include="icom\text.cs" />
+    <Compile Include="items\spawns.cs" />
+    <Compile Include="items\physic.cs" />
+    <Compile Include="mongodb\shop.cs" />
+    <Compile Include="mongodb\donate.cs" />
+    <Compile Include="Configs.cs" />
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="oban\ban.cs" />
+    <Compile Include="Patches\join.cs" />
+    <Compile Include="Patches\puddlescp106ye.cs" />
+    <Compile Include="Patches\TUTSpeak.cs" />
+    <Compile Include="Patches\Scp939Attack.cs" />
+    <Compile Include="Patches\Scp096ParseVision.cs" />
+    <Compile Include="player\med.cs" />
+    <Compile Include="player\died.cs" />
+    <Compile Include="player\hurt.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="cspawn\spawn.cs" />
+    <Compile Include="remote\keycard.cs" />
+    <Compile Include="scp228\API\data.cs" />
+    <Compile Include="scp228\EventHandlers.cs" />
+    <Compile Include="scp228\Configs.cs" />
+    <Compile Include="scp228\Logic.cs" />
+    <Compile Include="scp343\API\Data.cs" />
+    <Compile Include="scp343\Configs.cs" />
+    <Compile Include="scp343\EventHandlers.cs" />
+    <Compile Include="scp343\Logic.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

@@ -1,0 +1,36 @@
+using Loli.Discord;
+using Qurre.API.Events;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace Loli.Modules
+{
+	public partial class EventHandlers
+	{
+		internal void AntiBan(SendingRAEvent ev)
+		{
+			if (ev.Name != "ban") return;
+			string[] str = ev.Args[0].Split('.');
+			if (str.Count() > 3)
+			{
+				ev.Allowed = false;
+				if (!DataBase.Manager.Static.Data.Users.TryGetValue(ev.Player.UserId, out var _data) ||
+					(_data.donater && !(_data.trainee || _data.helper || _data.mainhelper || _data.admin || _data.mainadmin))) return;
+				ev.Player.Disconnect("ай, ай, ай");
+				Plugin.Socket.Emit("database.remove.admin", new object[] { _data.id });
+				string hook = "https://discord.com/api/webhooks";
+				new Webhook(hook).Send("Замечена попытка краша. В целях безопасности, админка у данного администратора снята.", Plugin.ServerName, null, false,
+					embeds: new List<Embed>()
+					{
+						new()
+						{
+							Title = "Попытка краша",
+							Color = 1,
+							Description = $"Попытался крашнуть:\n{ev.Player.Nickname} - {ev.Player.UserId}",
+							TimeStamp = DateTimeOffset.Now
+						}
+					});
+			}
+		}
+	}
+}

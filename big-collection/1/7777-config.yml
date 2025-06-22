@@ -1,0 +1,104 @@
+#rewrite public plugins(added more functions(updated for scopophobia))
+chopper_drops_bc: <color=yellow>A helicopter with supplies arrived</color>
+chopper_drops_bc_time: 5
+chopper_drops: GrenadeFrag:4,Flashlight:1,GunMP7:4,GunUSP:2,Painkillers:4
+
+cis_enabled: true
+cis_spawn_with_grenade: true
+cis_spawn_chance: 60
+cis_guard_chance: 50
+cis_minimum_size: 6
+cis_shoot_bc: You attacked a %team%, you are now able to be killed by <color=#00b0fc>Nine Tailed Fox</color> and <color=#fcff8d>Scientists</color>
+cis_shoot_bc_time: 10
+cis_scientist: Scientist
+cis_role: CISpy
+cis_role_color: green
+cis_team_shoot_bc: You are shooting a <b><color=\"green\">CISpy!</color></b>
+cis_team_shoot_bc_time: 3
+cis_spawn_bc: <size=60>You are a <b><color=\"green\">CISpy</color></b></size>\nCheck your console by pressing [`] or [~] for more info.
+cis_spawn_bc_time: 3
+cis_console_msg: You are a Chaos Insurgency Spy! You are immune to MTF for now, but as soon as you damage an MTF, your spy immunity will turn off.\n\nHelp Chaos win the round and kill as many MTF and Scientists as you can.
+cis_console_msg_color: yellow
+cis_all_ci_dead_bc: Your fellow <color=\"green\">Chaos Insurgency</color> have died.\nYou have been revealed!
+cis_all_ci_dead_bc_time: 10
+
+#public plugins (updated for scopophobia)
+b079_enable: true
+b079_a1_dist: 15
+b079_a1_power: 15
+b079_a1_tier: 0
+b079_a4_power: 40
+b079_a4_tier: 1
+b079_a3_power: 100
+b079_a3_tier: 1
+b079_a3_timer: 60
+b079_a2_power: 75
+b079_a2_tier: 2
+b079_a2_timer: 5
+b079_a2_gas_timer: 10
+b079_a2_exp: 35
+b079_prefix: 079
+b079_help_title: Abilities/Commands:
+b079_help_a1: Teleport to your SCP friends
+b079_help_a2: Activate a memetic in the current room (only on humans)
+b079_help_a3: Shutdown Zone Lighting
+b079_help_a4: Camera Flash (blinds others)
+b079_msg_tier_required: Tier $tier+ Required
+b079_msg_no_power: Not enough power.
+b079_msg_help_cmd_fail: Invalid. Type \".$prefix ?\" for help.
+b079_msg_a1_fail: No SCPs found.
+b079_msg_a1_run: Teleporting...
+b079_msg_a2_fail: Memetics don't work here!
+b079_msg_a2_run: Activating...
+b079_msg_a3_run: Overcharging...
+b079_msg_a4_run: Flashing...
+b079_msg_a2_warn: <color=#ff0000>MEMETIC KILL AGENT will activate in this room in $seconds seconds.</color>
+b079_msg_a2_active: <color=#ff0000>MEMETIC KILL AGENT ACTIVATED.</color>
+b079_spawn_msg: <color=#00ff00>[Better079] Type \".079 help\" in the console for more abilities.</color>
+
+bs_enable: true
+bs_slow_distance: 1.5
+bs_teleport_distance: 0.7
+bs_teleport_message: You fell into the pocket dimension.
+bs_teleport_message_duration: 5
+
+blink_decreaserate: 0.75
+blink_minblinktime: 1.5
+blink_mintime: 2.5
+blink_maxtime: 3.5
+blink_addmin: 0.35
+blink_addmax: 0.45
+
+util_role_health: NtfCommander:200,NtfScientist:222,ChaosInsurgency:200,Tutorial:150,Scp0492:500,NtfLieutenant:150,NtfCadet:125,FacilityGuard:150,Scientist:130,ClassD:130
+util_enable_inventories: true
+util_classd_inventory: KeycardJanitor,Coin,Flashlight
+util_chaos_inventory: KeycardChaosInsurgency,GunLogicer,Medkit,Painkillers,Disarmer,GrenadeFrag,Flashlight
+util_ntfcadet_inventory: KeycardNTFLieutenant,GunProject90,WeaponManagerTablet,Radio,Disarmer,Medkit,Flashlight,GrenadeFrag
+util_ntfcommander_inventory: KeycardNTFCommander,GunUSP,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_ntflieutenant_inventory: KeycardNTFLieutenant,GunUSP,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_ntfscientist_inventory: KeycardNTFCommander,MicroHID,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_scientist_inventory: KeycardScientist,Medkit,Radio,Flashlight
+util_guard_inventory: KeycardGuard,GunProject90,Medkit,Medkit,Flashlight,Radio,GrenadeFrag,Disarmer
+util_enable_autonuke: true
+util_autonuke_time: 1200
+util_autonuke_lock: true
+util_049_healing: true
+util_049_heal_amount: 25
+util_049_heal_power: 1.25
+util_0492_healing: true
+util_0492_heal_amount: 25
+util_096_healing: true
+util_096_heal_amount: 150
+util_106_healing: true
+util_106_heal_amount: 75
+util_173_healing: true
+util_173_heal_amount: 150
+util_939_healing: true
+util_939_heal_amount: 125
+util_joinMessage: <color=lime>Добро пожаловать на сервер, %player%!\nПрочитайте правила перед игрой!</color>
+util_joinMessage_time: 15
+util_broadcast_seconds: 0
+
+cda_scp_access: true
+cda_scp_access_doors: 012
+cda_access_set: 106_PRIMARY:11&9&8&6,106_SECONDARY:11&9&8&6,HID:11&10&8&7,INTERCOM:4&5&6&7&8&9&10&11,096:4&5

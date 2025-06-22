@@ -1,0 +1,54 @@
+﻿using Exiled.API.Features;
+using Exiled.Events.EventArgs;
+using MEC;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PlayerXP.bc
+{
+	public partial class mec
+	{
+		public Plugin plugin;
+		public mec(Plugin plugin) => this.plugin = plugin;
+
+		private static List<CoroutineHandle> coroutines = new List<CoroutineHandle>();
+		private static System.Random rand = new System.Random();
+		public void OnRoundStart()
+		{
+			coroutines.Add(Timing.RunCoroutine(randombc()));
+		}
+
+		public void OnRoundEnd(RoundEndedEventArgs ev)
+		{
+			Timing.KillCoroutines(coroutines);
+			coroutines.Clear();
+		}
+		private static IEnumerator<float> randombc()
+		{
+			for (; ; )
+			{
+				int ri = rand.Next(1, 100);
+				if (ri < 25)
+				{
+					Map.Broadcast(10, "<b><color=#0089c7>Discord</color> <color=#00ffff>проекта</color>:</b>\n<color=#f47fff>discord<color=red>.</color>gg<color=#006dff>/</color>UCUBU2z</color>");
+				}
+				else if (ri < 50)
+				{
+					Map.Broadcast(10, "<b><color=#00ffff>Сайт</color>:</b>\n<color=#0089c7>scpsl<color=red>.</color>fydne<color=red>.</color>xyz</color>");
+				}
+				else if (ri < 75)
+				{
+					Map.Broadcast(10, "<b><color=#00ffff>Хотите узнать консольные команды</color>?</b>\n<color=#0089c7>Напишите <color=#0089c7>.</color><color=#ff0>help</color> в консоли на <color=##f47fff>[<color=red>ё</color>]</color></color>");
+				}
+				else
+				{
+					Map.Broadcast(10, "<size=30%><b><color=#00ffff>Есть <color=red>Жалобы</color>? <color=#15ff00>Предложения</color>? <color=#006dff>Вопросы</color>? <color=#ffb500>Проблемы с сервером</color>?\n<color=#9bff00>Хотите подать заявку на должность</color>?</color></b>\n<color=#fdffbb>Откройте тикет в <color=#0089c7>Discord</color>'e</color></size>");
+				}
+				yield return Timing.WaitForSeconds(500f);
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+using MEC;
+using Qurre.API;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+namespace Loli.Modules
+{
+	public partial class EventHandlers
+	{
+		internal void WaitingForPlayers()
+		{
+			try
+			{
+				if (first)
+				{
+					first = false;
+					ServerConsole.ReloadServerName();
+					Timing.RunCoroutine(Сycle());
+					Timing.RunCoroutine(FastСycle());
+					Timing.RunCoroutine(SlowСycle());
+					Timing.RunCoroutine(plugin.BroadCasts.Send());
+					Thread thread = new(() => Logs.Api.SendOnline());
+					thread.Start();
+					Timing.RunCoroutine(CountTicks());
+					Timing.RunCoroutine(CountTicksUpdate());
+				}
+			}
+			catch { }
+		}
+		private IEnumerator<float> Сycle()
+		{
+			for (; ; )
+			{
+				try { AlphaDead(); } catch { }
+				try { BetterHints.Manager.Cycle(); } catch { }
+				try { AutoEndZeroPlayers(); } catch { }
+				try { plugin.ScpHeal.Heal(); } catch { }
+				try { plugin.Icom.Update(); } catch { }
+				try { plugin.Scp035.CorrodeUpdate(); } catch { }
+				try { plugin.Stalky.CooldownUpdate(); } catch { }
+				try { FixLogicer(); } catch { }
+				try { Textures.Models.Rooms.Servers.FixDown(); } catch { }
+                try { foreach (var pl in Player.List) try { CheckEscape(pl); } catch { } } catch { }
+                try { Textures.Models.Rooms.Range.ClearWaitInv(); } catch { }
+
+                yield return Timing.WaitForSeconds(1f);
+			}
+		}
+		private IEnumerator<float> FastСycle()
+		{
+			for (; ; )
+			{
+				try { Addons.Gate3.DoorTeleport(); } catch { }
+				yield return Timing.WaitForSeconds(0.3f);
+			}
+		}
+		private IEnumerator<float> SlowСycle()
+		{
+			for (; ; )
+			{
+				try { plugin.Scp035.CorrodeHost(); } catch { }
+				try { AMCRandom = UnityEngine.Random.Range(0, 30); } catch { }
+				try { AntiZeroHP(); } catch { }
+				try { ScientistNull(); } catch { }
+				try { AutoAlpha(); } catch { }
+				try { PosCheck(); } catch { }
+				try { Names(); } catch { }
+				yield return Timing.WaitForSeconds(5f);
+			}
+		}
+		private IEnumerator<float> CountTicks()
+		{
+			for (; ; )
+			{
+				Plugin.Ticks++;
+				yield return Timing.WaitForOneFrame;
+			}
+		}
+		private int LowTPS = 0;
+		private IEnumerator<float> CountTicksUpdate()
+		{
+			for (; ; )
+			{
+				Plugin.TicksMinutes = Plugin.Ticks / 5;
+				Plugin.Ticks = 0;
+				new Thread(() =>
+				{
+					new Thread(() =>
+					{
+						if (Plugin.TicksMinutes > 0 && ((Plugin.ServerID == 3 || Plugin.ServerID == 11 || Player.List.Count() > 15) ? 13 : 21) >= Plugin.TicksMinutes)
+						{
+							if (LowTPS > 12 && !Round.Waiting)
+							{
+								Round.End();
+								Thread.Sleep(10000);
+								Server.Restart();
+							}
+							LowTPS++;
+						}
+						else LowTPS = 0;
+					}).Start();
+					if (Plugin.ServerID != 0 && !Plugin.ClansWars && Player.List.Count() > 1)
+						try { Addons.NetSocket.Send($"tps=;={Plugin.ServerID}=;={Plugin.ServerName}=;={Plugin.TicksMinutes}=;="); } catch { }
+				}).Start();
+				yield return Timing.WaitForSeconds(5);
+			}
+		}
+	}
+}

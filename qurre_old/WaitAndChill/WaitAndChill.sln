@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitAndChill", "WaitAndChill\WaitAndChill.csproj", "{11A56552-FC14-4804-9446-0E2510A6D56D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11A56552-FC14-4804-9446-0E2510A6D56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11A56552-FC14-4804-9446-0E2510A6D56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11A56552-FC14-4804-9446-0E2510A6D56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11A56552-FC14-4804-9446-0E2510A6D56D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6CDE09B-4B0E-4DDA-BAF5-084F6BC12DD4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<Obfuscator>
+	<Var name="InPath" value="." />
+	<Var name="OutPath" value=".\Obfuscator" />
+	
+	<Var name="KeepPublicApi" value="false" />
+	<Var name="HidePrivateApi" value="true" />
+	
+	<Var name="UseUnicodeNames" value="true" />
+	<Var name="UseKoreanNames" value="true" />
+	
+	<Var name="KeyFile" value="..\key.snk" />
+
+	<Module file="$(InPath)\Loli.dll" />
+
+	<SkipMethod type="Loli.Patches.AmmoLimits" name="Call" />
+	<SkipMethod type="Loli.Patches.NotFileLogs1" name="Prefix" />
+	<SkipMethod type="Loli.Patches.NotFileLogs2" name="Prefix" />
+	<SkipMethod type="Loli.Patches.NotFileLogs3" name="Prefix" />
+	<SkipMethod type="Loli.DataBase.Customize_Patch" name="Prefix" />
+	<SkipMethod type="Loli.Logs.RALogsPatch" name="Prefix" />
+	<SkipMethod type="Loli.Logs.Fixes7" name="Prefix" />
+	<SkipMethod type="Loli.Logs.Fixes8" name="Prefix" />
+	<SkipMethod type="Loli.Logs.Fixes9" name="Prefix" />
+	<SkipMethod type="Loli.BetterHints.Patches" name="Prefix" />
+	<SkipMethod type="Loli.Patches.FixGetIp" name="Call" />
+	<SkipMethod type="Loli.Patches.AntiSpyGroups" name="Call" />
+</Obfuscator>

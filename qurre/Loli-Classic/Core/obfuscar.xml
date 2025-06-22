@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<Obfuscator>
+	<Var name="InPath" value="." />
+	<Var name="OutPath" value=".\Obfuscator" />
+	
+	<Var name="KeepPublicApi" value="false" />
+	<Var name="HidePrivateApi" value="true" />
+	
+	<Var name="UseUnicodeNames" value="true" />
+	<Var name="UseKoreanNames" value="true" />
+	
+	<Var name="KeyFile" value="..\key.snk" />
+
+	<Module file="$(InPath)\Core.dll" />
+</Obfuscator>

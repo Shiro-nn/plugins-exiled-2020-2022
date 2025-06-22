@@ -1,0 +1,412 @@
+has_enabled: true
+has_max_nuts: 2
+has_roleids_ping: "654616522513448960"
+server: fydne ff:on
+has_join_bc: <color=red>Currently playing: <color=aqua>Hide and Seek</color> Gamemode.</color>
+has_join_bc_time: 5
+has_win_player_bc: <color=red>Checkpoints are open, you have to escape</color>
+has_win_player_bc_time: 10
+has_win_player_bc: <color=#ff5a00>%player%</color> <color=aqua>win in the event!</color>\n<color=red>Kill him!</color>
+has_win_player_bc_time: 15
+has_bot_id: 696670055819378779
+has_gamemode_enabled: Gamemode enabled
+has_auto_event: Auto Event
+has_conducts: Conducts:
+has_server: Server:
+has_event: Event:
+has_has: Hide and Seek
+has_next_round: In the next round
+has_command_1: has
+has_command_2: прятки
+
+j_enabled: true
+j_health: 300
+j_minimum_team_player: 4
+j_facility_replace: true
+j_getlog: false
+j_more_options: false
+j_better_ec: false
+j_scp_friendly_fire: false
+j_tutorial_friendly_fire: false
+j_win_with_tutorial: true
+j_teleport_to_106: true
+j_command: JG
+j_successfully: successfully
+j_not_found: hmm, player not found. It's a pity :(
+j_juggernaut_prefix: Juggernaut
+j_juggernaut_prefix_color: magenta
+j_dead_bc: \n<color=lime>Juggernaut is dead :(</color>
+j_dead_bc_time: 10
+j_spawn_bc: <color=red>You are spawned for a Juggernaut.</color>\n <color=red>You are against everyone except scp and hand</color>\n You will be released in 2 minutes
+j_spawn_bc_time: 10
+j_escape_bc: <color=magenta>Juggernaut Appears</color>\n<color=red>He is against everyone except SCP and Hand</color>
+j_escape_bc_time: 10
+
+p_enabled: true
+p_initial_delay: 400
+p_dur_min: 50
+p_dur_max: 100
+p_random_events: true
+p_delay_min: 180
+p_delay_max: 500
+p_poltergeist_attack_bc: <color=red>You are attacked by a poltergeist!</color>\n<color=lime>Take a flashlight</color><color=aqua>!</color>
+p_poltergeist_attack_bc_time: 5
+p_poltergeist_spawn_bc: <color=aqua>Poltergeist</color> <color=red>appeared</color>
+p_poltergeist_spawn_bc_time: 10
+p_player_death_bc: <color=lime>Poltergeist received his victim.</color>\n<color=aqua>Now he is friendlier</color>
+p_player_death_bc_time: 10
+p_poltergeist_house_bc: <color=red>This is the poltergeist house, go away!</color>
+p_poltergeist_house_bc_time: 5
+
+scp228ruj_enabled: true
+scp228ruj_getlog: false
+scp228ruj_more_options: false
+#if attacker == scp228
+scp228ruj_scp_friendly_fire: true
+scp228ruj_tutorial_friendly_fire: true
+#end
+scp228ruj_win_with_tutorial: false
+scp228ruj_teleport_to_106: true
+scp228ruj_error_bc: <color=red>Error...</color>
+scp228ruj_error_console: Error...
+scp228ruj_error_console_color: red
+scp228ruj_escape_bc: \n<color=lime>Last <color=red>SCP 228 RU J</color> escaped!</color>
+scp228ruj_escape_bc_time: 10
+scp228ruj_death_bc: \n<color=lime>Last <color=red>SCP 228 RU J</color> death!</color>
+scp228ruj_death_bc_time: 10
+scp228ruj_spawn_console: All your fellow gopniks are dead :(\nYou have already run out of this wonderful vodka drink \nYou are thirsty, so find vodka and drink it, if you don’t do this, you will die \nYou have a super ability to open only doors that lead to vodka \nVodka for a rainy day is your vodka for a rainy day, it is contained in a bottle of cola, there is only one, do not mix it up!
+scp228ruj_spawn_console_color: red
+scp228ruj_spawn_bc: <color=red>All your fellow gopniks are dead</color><color=aqua>(</color>\n<color=lime>More information on [~]</color>
+scp228ruj_spawn_bc_time: 10
+scp228ruj_spawn: On spawn
+scp228ruj_vodka_pickup_player_bc: <color=red>It's vodka SCP 228 RU J (%player%)</color>
+scp228ruj_vodka_pickup_player_bc_time: 5
+scp228ruj_vodka_pickup_bc: <color=aqua>%player%</color><color=red> tried to pick up your vodka</color>
+scp228ruj_vodka_pickup_bc_time: 5
+scp228ruj_attacking: <color=red>SCP 228 RU J</color> <color=aqua>attacking you</color><color=red>!</color>\n<color=lime>Run away from him, he is looking for vodka</color>
+scp228ruj_search_vodka_bc: <color=lime>Hooray! Did you find vodka</color>\n<color=aqua>Drink it and run away, the main thing is to drink, because it's not cola, but vodka</color>
+scp228ruj_search_vodka_bc_time: 10
+scp228ruj_escape_error_bc: <color=red>You didn't find vodka!</color>
+scp228ruj_escape_error_bc_time: 10
+scp228ruj_command: scp228
+scp228ruj_not_found: player not found
+scp228ruj_successfully: successfully
+
+mp_database_name: MultiPluginChat
+mp_general_chat_color: cyan
+mp_private_message_color: magenta
+mp_max_message_length: 100
+mp_censor_bad_words: false
+mp_censor_bad_words_char: *
+mp_bad_words: f*ck
+mp_save_chat_to_database: true
+mp_can_spectator_send_messages_to_alive: false
+mp_show_chat_muted_broadcast: true
+mp_chat_muted_broadcast_duration: 10
+mp_chat_muted_broadcast: <color=red>You were muted in the chat for {0} minutes, reason: {1}</color>
+mp_is_slow_mode_enabled: true
+mp_slow_mode_interval: 1
+mp_chat_min: minutes
+mp_chat_sec: sec
+mp_chat_reason: reason
+mp_chat_msg: message
+mp_chat_com: Command
+mp_chat_com_list: Commands List
+mp_chat_team: TEAM
+mp_chat_public: PUBLIC
+mp_chat_private: PRIVATE
+mp_chat_lang_1: You cannot send messages from the server!
+mp_chat_lang_2: An error occurred while executing the command!
+mp_chat_lang_3: <color=lime>On this server exists Chat</color>\n<color=red>.help</color>
+mp_chat_lang_4: Welcome to chat!
+mp_chat_lang_5: %player% left the chat!
+mp_chat_lang_6: Enable player chat
+mp_chat_lang_7: You do not have sufficient permissions to run this command!
+mp_chat_lang_8: You must provide one parameter!
+mp_chat_lang_9: %player% not found!
+mp_chat_lang_10: %player% not muted!
+mp_chat_lang_11: <size=25><color=lime>You were unmuted in the chat!</color></size>
+mp_chat_lang_12: %player% was unmuted in the chat
+mp_chat_lang_13: Mute player on the chat
+mp_chat_lang_14: You must provide two parameters!
+mp_chat_lang_15: %time% invalid duration!
+mp_chat_lang_16: The reason cannot be empty!
+mp_chat_lang_17: %player% is already muted!
+mp_chat_lang_18: <size=25><color=red>You were muted in the chat for %duration%! Reason: %reason%</color></size>
+mp_chat_lang_19: %player% was muted in the chat on %duration%, reason: %reason%
+mp_chat_lang_20: Sends a chat message to your team.
+mp_chat_lang_21: There are no players available for communication!
+mp_chat_lang_22: Sends a message to everyone on the server.
+mp_chat_lang_23: Sends a private chat message to the player.
+mp_chat_lang_24: You cannot send a message to yourself!
+mp_chat_lang_25: You cannot send messages to live players!
+mp_chat_lang_26: Sends a list of commands or a description of a single command.
+mp_chat_lang_27: Commands not found
+mp_chat_lang_28: Command %command% not found!
+mp_chat_lang_29: Too many arguments!
+mp_chat_lang_30: Message cannot be empty!
+mp_chat_lang_31: You send messages too fast!
+mp_chat_lang_32: The message is too long! Maximum length: %length%
+mp_chat_lang_33: You muted
+mp_035_enabled: true
+mp_035_command: scp035
+mp_035_not_found: player not found
+mp_035_successfully: successfully
+mp_035_prefix_color: red
+mp_035_prefix: SCP 035
+mp_035_spawn_bc: <size=60>You pickup <color=red>SCP-035.</color></size>\n You are against everyone except scp and hand.
+mp_035_spawn_bc_time: 10
+mp_035_health: 300
+mp_035_rotate_interval: 120
+mp_035_scp_friendly_fire: false
+mp_035_infected_item_count: 2
+mp_035_win_with_tutorial: false
+mp_035_tutorial_friendly_fire: false
+mp_035_corrode_players: true
+mp_035_corrode_distance: 1.5
+mp_035_corrode_damage: 5
+mp_035_corrode_interval: 1
+mp_035_corrode_life_steal: true
+#mp_035_possible_items: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 23, 24, 25, 26, 27, 30, 33, 34
+mp_035_corrode_trail: false
+mp_035_corrode_trail_interval: 5
+mp_035_corrode_host: false
+mp_035_corrode_host_interval: 6
+mp_035_corrode_host_amount: 5
+mp_035_can_use_medical_items: true
+mp_181_door_open_bc: \n<color=#54ff00>SCP 181 opened the door for you</color>
+mp_181_safe_user_bc: \n<color=#54ff00>SCP 181 helped you</color>
+mp_181_safe_attacker_bc: \n<color=red>SCP 181 helped its victim.</color>
+mp_181_dont_open_bc: <color=red>SCP 181 doesn't like war</color>
+mp_181_dont_open_bc_time: 5
+mp_682_health: 400
+mp_682_spawn_chance: 100
+mp_343_spawn_chance: 100
+mp_682_dmg: 1000
+mp_682_force_scp93953: true
+mp_682_scp_friendly_fire: false
+mp_682_tutorial_friendly_fire: false
+mp_343_time_doors_open: 120
+mp_343_min_users_for_spawn: 5
+mp_343_spawn_console_msg: You are SCP 343 \nYou can open the door in 2 minutes \nYou must help people survive \nType 7.62 to increase \nTypical 5.56 to decrease \nType 9mm when you teleport to a random player \nGood Luck
+mp_343_spawn_bc_msg: <color=red>You SCP 343.</color>\n <color=red>More information in your console on [~]</color>
+mp_343_spawn_bc_time: 10
+mp_682_spawn_bc: <color=red>You SCP 682.</color>\n<color=red>You are an invulnerable reptile</color>\n<size=10>Reptile magic</size>
+mp_682_spawn_bc_time: 10
+mp_343_nuke_interact: false
+mp_682_rep_bc: <color=red>You replaced the exited SCP 682.</color>\n<color=red>You are an invulnerable reptile</color>\n<size=10>Reptile magic</size>
+mp_682_rep_bc_time: 10
+mp_343_rep_bc: <color=red>You replaced the exited SCP 343.</color>\n<color=red>More information in your console on [~]</color>
+mp_343_rep_bc_time: 10
+mp_343_escape_bc: <color=red>SCP 343 escape!</color>
+mp_343_escape_bc_time: 10
+mp_343_escape_cassie: scp 3 4 3 escape
+mp_343_rip_cassie: scp 3 4 3 CONTAINMENT MINUTE
+mp_682_rip_cassie: scp 6 8 2 CONTAINMENT MINUTE
+mp_682_spawn_cassie: ATTENTION TO ALL PERSONNEL ESCAPE SCP 6 8 2 ALL HELICOPTERS AND MOBILE TASK FORCES IMMEDIATELY MOVE FORWARD TO GATE B . REPEAT ALL HELICOPTERS AND MOBILE TASK FORCES IMMEDIATELY MOVE FORWARD TO GATE B
+mp_682-343_error_RA: Please enter in an ID from a player that exists in the game!
+mp_682_suc_RA: okaay, (s)he SCP 682!
+mp_343_suc_RA: okaay, (s)he SCP 343!
+mp_343_soon: Soon...
+mp_343_door_dont_access: <color=red>You will be able to open the door in {0} seconds!</color>
+mp_ban_msg: You have been banned by %admin%. Reason:%reason%
+mp_kick_msg: You have been kicked by %admin%. Reason:%reason%
+mp_ban: banned
+mp_kick: kicked
+mp_before: before
+mp_343_tp: You are teleported to %player%
+mp_join_hint: <color=#00fffb>Welcome to the server</color> <color=#ffa600>f</color><color=#ffff00>y<color=#1eff00>d</color><color=#0004ff>n</color><color=#9d00ff>e</color>\n<color=#09ff00>If you like any plugins, then you can buy them on the site scpsl.store</color>
+mp_not_found: Player not found
+mp_error_i: Player %player% infected.
+mp_suc_i: Player %player% has been infected by SCP-008.
+mp_error_c: Player %player% not infected
+mp_suc_c: Player %player% was cured of SCP-008.
+mp_scp008_infect: You are infected with SCP-008. You will become SCP 049-2 in {0} seconds!
+mp_infection_chance: 100
+mp_infection_length: 30
+mp_turn_on_death: true
+mp_line_1: https://scpsl.store
+mp_line_2: https://fydne.xyz:444
+mp_line_3: discord.gg/UCUBU2z
+#mp_line_4: 1
+#mp_line_5: 1
+#mp_line_6: 1
+#mp_line_7: 1
+#mp_line_8: 1
+mp_bs_enable: true
+mp_bs_slow_distance: 1.5
+mp_bs_teleport_distance: 0.7
+mp_bs_teleport_message: You fell into the pocket dimension.
+mp_bs_teleport_message_duration: 5
+mp_replace_bc: <i>You have replaced a player who has disconnected.</i>
+mp_replace_bc_time: 5
+mp_sh_spawn_items: 21,26,12,14,10
+mp_sh_spawn_chance: 50
+mp_sh_health: 150
+mp_sh_max_squad: 20
+mp_sh_team_respawn_delay: 1
+mp_sh_entry_announcement: HASENTERED SERPENTS HAND
+mp_sh_ci_entry_announcement: HASENTERED CHAOSINSURGENCY
+mp_sh_friendly_fire: false
+mp_sh_teleport_to_106: true
+mp_sh_scps_win_with_chaos: true
+mp_sh_spawn_bc: <color=red>You</color> <color=#15ff00>SerpentsHand</color>\n<color=#00ffdc>Your task is to kill everyone except SCP</color>
+mp_sh_spawn_bc_time: 10
+mp_usecustomsequence: false
+mp_colorsequence: pink, red, brown, silver, light_green
+mp_activegroups: [rainbow, elite]
+mp_taginterval: 0.5
+mp_914escape_teleport_points: topsite,CROSSING,LC_CAFE,LC_914_CR,HC_079_HALL,HC_079_MON,HC_079_CR,HC_TESLA_B,HC_106_CR,HC_SERVERS,HC_096_CR,nukesite,HC_457_CR,LC_ARMORY,Shelter,Straight_4,Offices_PCs,Offices_upstair,Smallrooms2
+mp_914escape_damage_human: 50
+mp_914escape_damage_scp: 50
+mp_914escape_damage_type: 0 # The type of damage done. (0 for percentage of current health, 1 for damage done in HP count)
+mp_scp1162_bc: <i>You try to drop the item through <color=yellow>SCP-1162</color> to get another item...</i>
+mp_discord_ban_webhook: https://discordapp.com/api/webhooks//fff-scpsl.store-fff
+mp_discord_ban_roleids_ping: 696670055819378779
+mp_discord_ra_webhook: https://discordapp.com/api/webhooks//fff-scpsl.store-fff
+mp_discord_ra_roleids_ping: 696670055819378779
+mp_discord_ra_sender: Sender:
+mp_discord_tk_webhook: https://discordapp.com/api/webhooks//fff-scpsl.store-fff
+mp_discord_tk_teamkill: Team Kill
+mp_discord_tk_roleids_ping: 696670055819378779
+mp_discord_tk_server: Server
+mp_discord_tk_killer: Killer
+mp_discord_tk_victim: Victim
+mp_alpha_enable_delay: true
+mp_alpha_is_damage_type_percent: true
+mp_alpha_damage: 1
+mp_alpha_delay_time: 90
+mp_alpha_time_between_dmg: 1
+mp_scplist_broadcast: false
+mp_swap_allow_new_scps: false
+mp_swap_timeout: 60
+mp_swap_request_timeout: 20
+mp_swap_language_1: Swap successful!
+mp_swap_language_2: You do not have a swap request.
+mp_swap_language_3: Swap request denied.
+mp_swap_language_4: Your swap request has been denied.
+mp_swap_language_5: You do not have a swap reqest.
+mp_swap_language_6: Your swap request has been cancelled.
+mp_swap_language_7: You have cancelled your swap request.
+mp_swap_language_8: You do not have an outgoing swap request.
+mp_swap_language_9: Swap request sent!
+mp_swap_language_10: Could not find a player to swap with, you have been made the specified SCP.
+mp_swap_language_11: No players found to swap with.
+mp_swap_language_12: You cannot swap with your own role.
+mp_swap_language_13: That SCP is blacklisted.
+mp_swap_language_14: You already have a request pending!
+mp_swap_language_15: Invalid SCP.
+mp_swap_language_16: USAGE: .SCPSWAP [SCP NUMBER]
+mp_swap_language_17: SCP swap period has expired.
+mp_swap_language_18: You're not an SCP, why did you think that would work.
+mp_swap_language_19: The round hasn't started yet!
+mp_swap_language_20: The player did not respond to your request.
+mp_swap_language_21: Your swap request has timed out.
+mp_swap_language_22: <i>You have an SCP Swap request!\nCheck your console by pressing [`] or [~]</i>
+mp_swap_language_23: You have received a swap request from %player% who is SCP-%player.role%. Would you like to swap with them? Type \".scpswap yes\" to accept or \".scpswap no\" to decline.
+#mp_discord_language: en, es, fr, ja, ch, ru, pl
+mp_ms_death_bc: <color=red>Major Scientist is dead.</color>\n<color=aqua>Press F</color>
+mp_ms_death_bc_time: 10
+mp_ms_spawn_bc: You <color=yellow><b>Major Scientist</b></color>!\nIf you die, then MTF cannot win. You have to escape!
+mp_ms_spawn_bc_time: 10
+mp_ms_prefix: Major Scientist
+mp_ms_prefix_color: yellow
+mp_ms_health: 175
+mp_ms_classd_replace_scientist: false
+mp_blink_decreaserate: 0.75
+mp_blink_minblinktime: 1.5
+mp_blink_mintime: 2.5
+mp_blink_maxtime: 3.5
+mp_blink_addmin: 0.35
+mp_blink_addmax: 0.45
+mp_chopper_drops_bc: <color=yellow>A helicopter with supplies arrived</color>
+mp_chopper_drops_bc_time: 5
+mp_chopper_drops: GrenadeFrag:4,Flashlight:1,GunMP7:4,GunUSP:2,Painkillers:4
+mp_cis_enabled: true
+mp_cis_spawn_with_grenade: true
+mp_cis_spawn_chance: 60
+mp_cis_guard_chance: 50
+mp_cis_minimum_size: 6
+mp_cis_shoot_bc: You attacked a %team%, you are now able to be killed by <color=#00b0fc>Nine Tailed Fox</color> and <color=#fcff8d>Scientists</color>
+mp_cis_shoot_bc_time: 10
+mp_cis_scientist: Scientist
+mp_cis_role: CISpy
+mp_cis_role_color: green
+mp_cis_team_shoot_bc: You are shooting a <b><color=\"green\">CISpy!</color></b>
+mp_cis_team_shoot_bc_time: 3
+mp_cis_spawn_bc: <size=60>You are a <b><color=\"green\">CISpy</color></b></size>\nCheck your console by pressing [`] or [~] for more info.
+mp_cis_spawn_bc_time: 3
+mp_cis_console_msg: You are a Chaos Insurgency Spy! You are immune to MTF for now, but as soon as you damage an MTF, your spy immunity will turn off.\n\nHelp Chaos win the round and kill as many MTF and Scientists as you can.
+mp_cis_console_msg_color: yellow
+mp_cis_all_ci_dead_bc: Your fellow <color=\"green\">Chaos Insurgency</color> have died.\nYou have been revealed!
+mp_cis_all_ci_dead_bc_time: 10
+mp_cda_scp_access: true
+mp_cda_scp_access_doors: 012
+mp_cda_access_set: 106_PRIMARY:11&9&8&6,106_SECONDARY:11&9&8&6,HID:11&10&8&7,INTERCOM:4&5&6&7&8&9&10&11,096:4&5
+
+
+
+
+#public plugins (updated for scopophobia)
+b079_enable: true
+b079_a1_dist: 15
+b079_a1_power: 15
+b079_a1_tier: 0
+b079_a4_power: 40
+b079_a4_tier: 1
+b079_a3_power: 100
+b079_a3_tier: 1
+b079_a3_timer: 60
+b079_a2_power: 75
+b079_a2_tier: 2
+b079_a2_timer: 5
+b079_a2_gas_timer: 10
+b079_a2_exp: 35
+b079_prefix: 079
+b079_help_title: Способности/Команды:
+b079_help_a1: Телепортация к scp
+b079_help_a2: Активировать memetic в текущей комнате (только на людях)
+b079_help_a3: Отключение света в комплексе
+b079_help_a4: Вспышка камеры (ослепляет других)
+b079_msg_tier_required: Требуется $tier+ уровень
+b079_msg_no_power: Не хватает энергии.
+b079_msg_help_cmd_fail: Используй \".$prefix ?\" для помощи.
+b079_msg_a1_fail: SCP не найдены.
+b079_msg_a1_run: Телопортация...
+b079_msg_a2_fail: Memetics не работает здесь!
+b079_msg_a2_run: Активация...
+b079_msg_a3_run: Перезарядка...
+b079_msg_a4_run: Ослепление...
+b079_msg_a2_warn: <color=#ff0000>MEMETIC KILL AGENT появится в этой комнате через $seconds секунд.</color>
+b079_msg_a2_active: <color=#ff0000>MEMETIC KILL AGENT ACTIVATED.</color>
+b079_spawn_msg: <color=#00ff00>[Better079] Type \".079 help\" in the console for more abilities.</color>
+
+util_role_health: NtfCommander:200,NtfScientist:222,ChaosInsurgency:200,Tutorial:150,Scp0492:500,NtfLieutenant:150,NtfCadet:125,FacilityGuard:150,Scientist:130,ClassD:130
+util_enable_inventories: true
+util_classd_inventory: KeycardJanitor,Coin,Flashlight
+util_chaos_inventory: KeycardChaosInsurgency,GunLogicer,Medkit,Painkillers,Disarmer,GrenadeFrag,Flashlight
+util_ntfcadet_inventory: KeycardNTFLieutenant,GunProject90,WeaponManagerTablet,Radio,Disarmer,Medkit,Flashlight,GrenadeFrag
+util_ntfcommander_inventory: KeycardNTFCommander,GunUSP,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_ntflieutenant_inventory: KeycardNTFLieutenant,GunUSP,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_ntfscientist_inventory: KeycardNTFCommander,MicroHID,GunE11SR,Radio,GrenadeFrag,Disarmer,Adrenaline,Flashlight
+util_scientist_inventory: KeycardScientist,Medkit,Radio,Flashlight
+util_guard_inventory: KeycardGuard,GunProject90,Medkit,Medkit,Flashlight,Radio,GrenadeFrag,Disarmer
+util_enable_autonuke: true
+util_autonuke_time: 1200
+util_autonuke_lock: true
+util_049_healing: true
+util_049_heal_amount: 25
+util_049_heal_power: 1.25
+util_0492_healing: true
+util_0492_heal_amount: 25
+util_096_healing: true
+util_096_heal_amount: 150
+util_106_healing: true
+util_106_heal_amount: 75
+util_173_healing: true
+util_173_heal_amount: 150
+util_939_healing: true
+util_939_heal_amount: 125
+util_joinMessage: <color=lime>Добро пожаловать на сервер, %player%!\nПриятной игры!</color>
+util_joinMessage_time: 15
+util_broadcast_seconds: 0
